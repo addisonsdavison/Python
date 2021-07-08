@@ -24,6 +24,12 @@ class BankAccount:
         self.balance += self.int_rate * self.balance
         return self
 
+class User:
+    def __init__(self,name,email):
+        self.name = name
+        self.email = email
+        self.Bankaccount(int_rate = .02, balance = 0)
+
 account1 = BankAccount(.02,1000)
 account2 = BankAccount(.02,2000)
 account1.deposit(100).deposit(200).deposit(300).withdraw(50).yield_interest().display_account_info()
