@@ -23,7 +23,7 @@ class User:
 
 michael = User("Michael","michael@codingdojo.com")
 anna = User("Anna", "anna@hotmail.com")
-anna = User()
+# anna = User()
 anna.bank_name = "Dojo Credit Union"
 adam = User("Adam Horowitz","adam@beastiemail.com")
 michael.make_deposit(100)
