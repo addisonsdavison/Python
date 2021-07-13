@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+p  {
+    background-color: mistyrose;
+    color: orchid;
+    padding: 10px;;
+    display: inline-block
+    ;
+
+}

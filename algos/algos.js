@@ -158,3 +158,84 @@ function longestPalindromicSubstring(str) {
 console.log(longestPalindromicSubstring(str1))
 console.log(longestPalindromicSubstring(str2))
 console.log(longestPalindromicSubstring(str3))
+
+// ---------------------------------------
+
+/* 
+String Encode
+You are given a string that may contain sequences of consecutive characters.
+Create a function to shorten a string by including the character,
+then the number of times it appears. 
+
+
+If final result is not shorter (such as "bb" => "b2" ),
+return the original string.
+*/
+
+const str1 = "aaaabbcddd";
+const expected1 = "a4b2c1d3";
+
+const str2 = "";
+const expected2 = "";
+
+const str3 = "a";
+const expected3 = "a";
+
+const str4 = "bbcc";
+const expected4 = "bbcc";
+
+function encodeStr(str) {}
+
+/*****************************************************************************/
+
+/* 
+  String Decode  
+*/
+
+const str1 = "a3b2c1d3";
+const expected1 = "aaabbcddd";
+
+function decodeStr(str) {}
+
+// ---------------------
+
+/* 
+Given an array of strings
+return a sum to represent how many times each array item is found (a frequency table)
+Useful methods:
+  Object.hasOwnProperty("keyName")
+    - returns true or false if the object has the key or not
+  Python: key in dict
+*/
+
+const arr1 = ["a", "a", "a"];
+const expected1 = {
+  a: 3,
+};
+
+const arr2 = ["a", "b", "a", "c", "B", "c", "c", "d"];
+const expected2 = {
+  a: 2,
+  b: 1,
+  c: 3,
+  B: 1,
+  d: 1,
+};
+
+const arr3 = [];
+const expected3 = {};
+
+function frequencyTableBuilder(arr) {}
+
+/*****************************************************************************/
+
+/* 
+  Reverse Word Order
+  Given a string of words (with spaces)
+  return a new string with words in reverse sequence.
+*/
+
+const str1 = "This is a test";
+const expected1 = "test a is This";
+
+function reverseWordOrder(wordsStr) {}

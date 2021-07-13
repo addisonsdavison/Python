@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .box1{
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            margin: 2px;
+            background-color: mistyrose;
+        }
+
+        .box2{
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            margin: 2px;
+            background-color: rgb(202, 64, 184);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    rows {{ rows }}
+    columns {{ columns }}
+
+    <div class="container">
+        <h1>Checkerboard</h1>
+        <table>
+            {% for i in range(rows): %} 
+                <tr>
+                    {% for j in range(rows): %}
+                    <td class="box1"></td>
+                    <td class="box2"></td>
+                    {% endfor %} 
+                </tr>
+                <tr>
+                    {% for j in range(rows): %}
+                    <td class="box2"></td>
+                    <td class="box1"></td>
+                    {% endfor %} 
+                </tr>
+                {% endfor %} 
+        </table>
+    </div>  
+</body>
+</html>
+                
+
+
