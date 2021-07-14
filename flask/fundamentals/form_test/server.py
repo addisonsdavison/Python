@@ -1,20 +1,35 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session # don't forget to import redirect!
+app = Flask(__name__) 
+app.secret_key = 'keep it secret, keep it safe'
 
-app = Flask(__name__)
+# our index route will handle rendering our form
 @app.route('/')
 def index():
-    
-    print(request.form)
     return render_template("index.html")
 
 @app.route('/users', methods=['POST'])
 def create_user():
-    # request.form['name_of_input']
     print("Got Post Info")
-    print(request.form)
-    return redirect('/')
-    
+    # Here we add two properties to session to store the name and email
+    session['username'] = request.form['name']
+    session['useremail'] = request.form['email']
+    return redirect('/show')
 
 
-if __name__=="__main__":
+# adding this method
+# @app.route('/show')
+# def show_user():
+#     return render_template('show.html', name_on_template=session['username'], email_on_template=session['useremail'])
+
+@app.route('/show')
+def show_user():
+    return render_template('show.html')
+
+
+
+
+
+
+if __name__ == "__main__":
     app.run(debug=True)
+
